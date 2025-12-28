@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails Pokémon</title>
+    <link rel="stylesheet" href="../assets/pageinfo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://imgs.search.brave.com/T_M2wJQpDcTa41zgXwEzmQrQzdsQ2J8H7S_nYkm7WVE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naW1n/czIubm9oYXQuY2Mv/dGh1bWIvZi8zNTAv/cG9rZWJhbGwtcG9r/ZW1vbi1iYWxsLXBu/Zy1pbWFnZXMtZnJl/ZS1kb3dubG9hZC0t/Y29tZGxwbmc2OTYx/Njk3LmpwZw">
+
+</head>
+<body>
+<div class="pokemon-page">
+
+    <!-- IMAGE PRINCIPALE -->
+    <div class="hero">
+        <button id="prev-card" class="nav-btn left">‹</button>
+
+        <div class="card-tilt" id="card-tilt">
+    <div class="card-border"></div>
+    <div class="card-gloss"></div>
+    <img id="pokemon-image" alt="Carte Pokémon">
+</div>
+
+<div class="evo-nav">
+    <button id="prev-evo">⬅ Évolution précédente</button>
+    <button id="next-evo">Évolution suivante ➡</button>
+</div>
+
+
+
+
+        <button id="next-card" class="nav-btn right">›</button>
+
+        
+    </div>
+
+    <!-- INFOS -->
+    <div class="pokemon-info">
+
+        <h1 id="pokemon-name">Chargement...</h1>
+        <span class="pokemon-id">#<span id="pokemon-id"></span></span>
+
+        <div id="pokemon-types"></div>
+
+        <!-- STATS -->
+        <div class="stats">
+
+    <div class="stat">
+    <span class="stat-name">PV</span>
+
+    <div class="bar">
+        <div id="stat-hp" class="bar-fill"></div>
+    </div>
+
+    <span id="stat-hp-value" class="stat-value"></span>
+</div>
+
+    <div class="stat">
+    <span class="stat-name">ATK</span>
+
+    <div class="bar">
+        <div id="stat-atk" class="bar-fill"></div>
+    </div>
+
+    <span id="stat-atk-value" class="stat-value"></span>
+</div>
+
+    <div class="stat">
+    <span class="stat-name">DEF</span>
+
+    <div class="bar">
+        <div id="stat-def" class="bar-fill"></div>
+    </div>
+
+    <span id="stat-def-value" class="stat-value"></span>
+</div>
+
+</div>
+
+
+        <!-- INFOS RAPIDES -->
+        <div class="info-grid">
+            <div>
+                <strong>Taille</strong><br>
+                <span id="pokemon-height"></span>
+            </div>
+            <div>
+                <strong>Poids</strong><br>
+                <span id="pokemon-weight"></span>
+            </div>
+        </div>
+
+        <label class="toggle">
+            <input type="checkbox" id="toggle-source">
+            Afficher Sprite Tyradex
+        </label>
+
+    </div>
+</div>
+
+   <button id="nav-prev" class="side-nav left">‹</button>
+<button id="nav-next" class="side-nav right">›</button>
+
+    
+    <script src="../assets/infopokemon.js">
+
+</script>
+
+</body>
+</html>
+    
