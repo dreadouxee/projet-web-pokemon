@@ -1,0 +1,91 @@
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            height: 120px;
+            background: linear-gradient(90deg, #4f6cf5, #4cc9f0);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            padding: 0 32px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: white;
+            padding: 6px;
+        }
+
+        /* Navigation */
+        nav {
+            display: contents;
+        }
+
+        .nav-center {
+            text-align: center;
+        }
+
+        .nav-right {
+            text-align: right;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 34px;
+            padding: 10px 22px;
+            border-radius: 14px;
+            transition: transform 0.2s, background 0.2s;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.6);
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.08);
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            height: calc(100vh - 120px);
+            background:
+                linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                url("https://images2.alphacoders.com/124/thumb-1920-1243963.jpg")
+                center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 82px;
+            text-shadow: 5px 5px 0 rgba(0,0,0,0.6);
+        }
+
+        /* ================= RESPONSIVE ================= */
+       @media (max-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    nav a {
+        font-size: 22px;
+        padding: 8px 14px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+}

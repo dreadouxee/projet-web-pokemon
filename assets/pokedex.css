@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2c2c2c;
+}
+
+#pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+/*responsiveness*/
+@media (max-width: 900px) {
+    .card {
+        width: calc(100% / 4 - 16px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% / 3 - 12px);
+    }
+}
+
+/*cartes*/
+.card {
+    width: 160px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+
+
+    /* carré */
+    aspect-ratio: 1 / 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+h1 {
+    color: antiquewhite;
+}
+
+.pokedex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.pokemon-card img {
+    width: 100%;
+    height: auto;
+}
+.pokemon-card {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+}
+
+/* CONTENEUR */
+#controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+}
+
+/* INPUT + SELECT (BASE COMMUNE) */
+#controls input,
+#controls select {
+    background: #1f1f1f;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* INPUT */
+#search {
+    flex: 1;
+}
+
+/* PLACEHOLDER */
+#search::placeholder {
+    color: #888;
+}
+
+/* SELECT */
+#controls select {
+    cursor: pointer;
+}
+
+/* FOCUS */
+#controls input:focus,
+#controls select:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 2px rgba(76,175,80,0.25);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #controls {
+        flex-direction: column;
+    }
+
+    #controls input,
+    #controls select {
+        width: 100%;
+    }
+}
